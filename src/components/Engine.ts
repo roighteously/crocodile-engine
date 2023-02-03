@@ -9,12 +9,11 @@ class engine {
     public ticks: number = 0;
     public canvas: any = HTMLHelper.new("canvas", "croc-engine");
     public context: CanvasRenderingContext2D;
-    public hookRenderLoop(a): void {
-        a;
-    }
-    public renderLoop(): void {
+    public hookRenderLoop: ()=>void;
+    public renderLoop(hrl: void): void {
         this.context = this.canvas.getContext('2d');
         this.context.clearRect(0,0,this.canvas.width,this.canvas.height)
+        hrl;
         Renderer.render();
         this.ticks++;
     }
@@ -25,7 +24,7 @@ class engine {
         }
         this.context = this.canvas.getContext('2d');
         setInterval(() => {
-            this.renderLoop();
+            this.renderLoop(this.hookRenderLoop());
             Renderer.renderQueue.splice(0,Renderer.renderQueue.length)
         },10);
         
