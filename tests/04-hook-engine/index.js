@@ -2,5 +2,5 @@
 var Crocodile = window.Crocodile;
 // Not much we can do with hooking into the render loop but there it is.
 Crocodile.Engine.hookRenderLoop = function() {
-    console.log('I am in')
+    debugger;
 };

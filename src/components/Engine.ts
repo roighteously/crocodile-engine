@@ -9,7 +9,7 @@ class engine {
     public ticks: number = 0;
     public canvas: any = HTMLHelper.new("canvas", "croc-engine");
     public context: CanvasRenderingContext2D;
-    public hookRenderLoop: ()=>void;
+    public hookRenderLoop: ()=>void = function () {};
     public renderLoop(hrl: void): void {
         this.context = this.canvas.getContext('2d');
         this.context.clearRect(0,0,this.canvas.width,this.canvas.height)
