@@ -1,8 +1,10 @@
+import { Draw } from "./components/Draw";
 import { Engine } from "./components/Engine";
 
-export const CrocodileEngine = {
+export const Crocodile = {
     hook: Engine.hook,
-    Engine: Engine
+    Engine: Engine,
+    Draw: Draw
 }
 
-CrocodileEngine.hook();
+Crocodile.hook();
