@@ -1,4 +1,5 @@
 import { HTMLHelper } from "./HTMLHelper";
+import { Renderer } from "./Renderer";
 
 declare global {
     interface Window { CrocodileEngine: any; }
@@ -6,8 +7,10 @@ declare global {
 
 class engine {
     public ticks: number = 0;
-    private canvas;
+    public canvas: any = HTMLHelper.new("canvas", "croc-engine");
+    public context: CanvasRenderingContext2D = this.canvas.getContext('2d');
     public renderLoop(): void {
+        Renderer.render();
         this.ticks++;
     }
     public start() {
@@ -19,7 +22,6 @@ class engine {
         setInterval(() => {
             this.renderLoop();
         },30);
-        
     }
     public hook() { window.CrocodileEngine = this; window.CrocodileEngine.Engine.start(); }
 }
