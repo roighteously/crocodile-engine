@@ -1,5 +1,6 @@
 // Sadly for now we must use window, but we can bypass that in a weird way.
 var Crocodile = window.Crocodile;
+var Draw = Crocodile.Draw;
 // Lets get an object to move!
 var x = 1;
 var speed = 4;
@@ -40,7 +41,7 @@ function update() {
 
 
     Crocodile.Engine.clear();
-    Crocodile.Draw.square("#FF0000", x, y, 150, 75, true);
+    Draw.Square("#FF0000", x, y, 150, 75, true);
 }
 update();
 document.body.addEventListener("keydown", function (e) {

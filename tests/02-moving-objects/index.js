@@ -5,7 +5,7 @@ let x = 0;
 let y = 0;
 setInterval(function () {
     Crocodile.Engine.clear();
-    Crocodile.Draw.square("#FF0000", x, y, 150, 75, true);
+    Crocodile.Draw.Square("#FF0000", x, y, 150, 75, true);
     x++;
     y++;
     if(y == 50) {
