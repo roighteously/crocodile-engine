@@ -1,6 +1,4 @@
-import { HTMLHelper } from "../helpers/HTMLHelper";
-import { RenderableItem } from "../helpers/RenderableItem";
-import { RenderTypes } from "../helpers/RenderTypes";
+import { HTMLHelper } from "../HTMLHelper";
 
 declare global {
     interface Window { Crocodile: any; }
