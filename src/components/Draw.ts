@@ -14,7 +14,13 @@ export class draw {
     }
     public Text(font:string,c:string,x1:number,x2:number, moving:boolean=false) {
         Engine.context.font = font;
+        Engine.context.fillStyle = "#000000";
         Engine.context.fillText(c, x1, x2);
+    }
+    public Dialog(p1:string, p2:string, font:string) {
+        this.Square('#FF0000', 500,500,750,100)
+        this.Text("48px serif", p1, 500, 500)
+        this.Text("24px serif", p2, 500, 525)
     }
 }
 export const Draw = new draw();
