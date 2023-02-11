@@ -1,5 +1,3 @@
-// Sadly for now we must use window, but we can bypass that in a weird way.
-var Crocodile = window.Crocodile;
 var Draw = Crocodile.Draw;
 // Lets get an object to move!
 var x = 1;
