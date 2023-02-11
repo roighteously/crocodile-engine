@@ -13,10 +13,8 @@ export class renderer {
             if(item.type == RenderTypes.SQUARE) {
                 Engine.context.fillStyle = item.color;
                 Engine.context.fillRect(item.x1, item.x2, item.w, item.h);
-                Engine.context.fillStyle = "#000000";
             }
             if(item.type == RenderTypes.TEXT) {
-                Engine.context.fillStyle = "#000000";
                 Engine.context.font = item.font;
                 Engine.context.fillText(item.content, item.x1, item.x2);
             }
