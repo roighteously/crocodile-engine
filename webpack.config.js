@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src/main.ts',
   devtool: 'inline-source-map',
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -17,7 +17,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'CrocodileEngine-v'+require(path.resolve(__dirname, 'src/components/Engine.ts')).Engine.version+'.js',
     path: path.resolve(__dirname, 'build'),
   },
 };

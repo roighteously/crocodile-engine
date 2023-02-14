@@ -6,6 +6,7 @@ declare global {
 
 class engine {
     public ticks: number = 0;
+    public version: string = "1.0.0";
     public canvas: any = HTMLHelper.new("canvas", "croc-engine");
     public context: CanvasRenderingContext2D;
     public hookRenderLoop: ()=>void = function () {};
