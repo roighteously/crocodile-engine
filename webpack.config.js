@@ -17,7 +17,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'CrocodileEngine-v'+require(path.resolve(__dirname, 'src/Info.js')).version+'.js',
+    filename: 'CrocodileEngine.js',
     path: path.resolve(__dirname, 'build'),
   },
 };

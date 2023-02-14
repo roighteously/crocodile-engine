@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "webpack && echo >> build/bundle.js && echo var Crocodile = window.Crocodile; >> build/bundle.js"
+    "build": "webpack && echo >> build/CrocodileEngine.js && echo var Crocodile = window.Crocodile; >> build/CrocodileEngine.js"
   },
   "devDependencies": {
     "ts-loader": "^9.4.2",
