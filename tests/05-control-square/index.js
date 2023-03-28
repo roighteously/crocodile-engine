@@ -1,4 +1,3 @@
-var Draw = Crocodile.Draw;
 // Lets get an object to move!
 var x = 1;
 var speed = 4;
@@ -39,7 +38,7 @@ function update() {
 
 
     Crocodile.Engine.clear();
-    Draw.Square("#FF0000", x, y, 150, 75, true);
+    Crocodile.Draw.Square({color:"#FF0000", x, y, w:150, h:75});
 }
 update();
 document.body.addEventListener("keydown", function (e) {

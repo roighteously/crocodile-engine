@@ -1,1 +1,1 @@
-Crocodile.Draw.Image("./Cool.jpg", 1, 5);
+Crocodile.Draw.Image({source:"./Cool.jpg", x:1, y:5});

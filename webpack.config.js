@@ -17,7 +17,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'CrocodileEngine.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
   },
 };

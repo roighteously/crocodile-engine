@@ -1,1 +1,1 @@
-Crocodile.Draw.Square("#FF0000", 0, 0, 150, 75);
+Crocodile.Draw.Square({color: "#FF0000", x:0, y:0, w:150, h:75});

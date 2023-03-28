@@ -1,10 +1,28 @@
 {
+  "name": "crocodile-engine",
+  "description": "Very WIP funny HTML canvas render engine/library.",
+  "version": "2.0.0",
+  "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack && echo >> build/CrocodileEngine.js && echo var Crocodile = window.Crocodile; >> build/CrocodileEngine.js"
+    "build": "webpack && echo var Crocodile = window.Crocodile; >> build/bundle.js"
   },
   "devDependencies": {
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
     "webpack-cli": "^5.0.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roizor/crocodile-engine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roizor/crocodile-engine/issues"
+  },
+  "homepage": "https://github.com/Roizor/crocodile-engine#readme"
 }
