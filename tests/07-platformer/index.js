@@ -10,11 +10,15 @@ var jumpY = -1;
 var keys = [];
 var jumping = false;
 var platforms = [[1, 105]]
+var objT = ["Objective", "make the platform float [go up] (this is intended not a bug at all i poromise)","Win", "you win: da block is floatin!"]
+var oi = 0;
 
 function update() {
     requestAnimationFrame(update)
     COLLISION_PHYSICCCCCCCCCCCS();
     if (jumping) jumpY = y - 250;
+    console.log(y-250)
+    if (y-250 < -188) oi = 2
     if (keys['w'] && !jumping && jumpY > jumpYLimit) {
         jumping = true
         if (velY > -speed) {
@@ -41,7 +45,8 @@ function update() {
     JUUMP();
     Crocodile.Engine.clear();
     Crocodile.Draw.Square({ color: "#FF0000", x, y, w: 150, h: 75 });
-    Crocodile.Draw.Dialog("Objective", "make the platform float [go up] (this is intended not a bug at all i poromise)");
+    // 0 "t", "m"
+    Crocodile.Draw.Dialog(objT[oi], objT[oi+1]);
     drawPlatforms();
 }
 update();
