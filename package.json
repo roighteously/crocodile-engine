@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack && echo var Crocodile = window.Crocodile; >> build/bundle.js"
+    "build": "webpack && echo '' >> build/bundle.js && echo var Crocodile = window.Crocodile; >> build/bundle.js"
   },
   "devDependencies": {
     "ts-loader": "^9.4.2",
