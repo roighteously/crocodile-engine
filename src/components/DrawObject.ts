@@ -10,5 +10,6 @@ export default interface DrawObject {
     source?,
     color?,
     font?,
-    content?
+    content?,
+    type?
 }
