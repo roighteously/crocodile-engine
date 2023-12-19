@@ -12,6 +12,7 @@ export class draw {
         tempImg.onload = () => {
             Engine.context.drawImage(tempImg, x, y);
         }
+        document.appendChild(tempImg);
         Engine.drawQueue.push(obj);
     }
     public Square(obj: DrawObject) {

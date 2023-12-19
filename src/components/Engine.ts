@@ -23,7 +23,8 @@ class engine {
     public start() {
         if(!HTMLHelper.id("croc-engine")) {
             this.canvas = HTMLHelper.new("canvas", "croc-engine");
-            document.body.appendChild(this.canvas);
+            if (document.querySelector('#container')) document.querySelector('#container').appendChild(this.canvas);
+            if (!document.querySelector('#container')) document.body.appendChild(this.canvas);
         }
         this.context = this.canvas.getContext('2d');
         setInterval(() => {
